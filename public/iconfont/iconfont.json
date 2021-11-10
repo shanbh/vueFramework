@@ -1,0 +1,289 @@
+{
+  "id": "2189532",
+  "name": "产品基线图标库",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "Vue框架基线图标库",
+  "glyphs": [
+    {
+      "icon_id": "19136597",
+      "name": "保管管理",
+      "font_class": "baoguanguanli",
+      "unicode": "e631",
+      "unicode_decimal": 58929
+    },
+    {
+      "icon_id": "19136598",
+      "name": "档案库",
+      "font_class": "danganku",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "19136599",
+      "name": "档案管理",
+      "font_class": "danganguanli",
+      "unicode": "e633",
+      "unicode_decimal": 58931
+    },
+    {
+      "icon_id": "19136600",
+      "name": "库位管理",
+      "font_class": "kuweiguanli",
+      "unicode": "e634",
+      "unicode_decimal": 58932
+    },
+    {
+      "icon_id": "19136601",
+      "name": "档案查询",
+      "font_class": "danganchaxun",
+      "unicode": "e635",
+      "unicode_decimal": 58933
+    },
+    {
+      "icon_id": "19136602",
+      "name": "统计台账",
+      "font_class": "tongjitaizhang",
+      "unicode": "e636",
+      "unicode_decimal": 58934
+    },
+    {
+      "icon_id": "19136603",
+      "name": "案卷统计",
+      "font_class": "anjuantongji",
+      "unicode": "e637",
+      "unicode_decimal": 58935
+    },
+    {
+      "icon_id": "19136604",
+      "name": "档案利用",
+      "font_class": "danganliyong",
+      "unicode": "e638",
+      "unicode_decimal": 58936
+    },
+    {
+      "icon_id": "19136605",
+      "name": "分类管理",
+      "font_class": "fenleiguanli",
+      "unicode": "e639",
+      "unicode_decimal": 58937
+    },
+    {
+      "icon_id": "19136606",
+      "name": "我的下载",
+      "font_class": "wodexiazai",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "19136607",
+      "name": "借阅统计",
+      "font_class": "jieyuetongji",
+      "unicode": "e63b",
+      "unicode_decimal": 58939
+    },
+    {
+      "icon_id": "19136608",
+      "name": "归档记录",
+      "font_class": "guidangjilu",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "19136609",
+      "name": "回收站",
+      "font_class": "huishouzhan",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "19136610",
+      "name": "我的借阅",
+      "font_class": "wodejieyue",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "19136611",
+      "name": "数据采集",
+      "font_class": "shujucaiji",
+      "unicode": "e63f",
+      "unicode_decimal": 58943
+    },
+    {
+      "icon_id": "19136612",
+      "name": "我的收藏",
+      "font_class": "wodeshoucang",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "19136613",
+      "name": "综合类",
+      "font_class": "zonghelei",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    },
+    {
+      "icon_id": "19136614",
+      "name": "入库归档",
+      "font_class": "rukuguidang",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "19136615",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e643",
+      "unicode_decimal": 58947
+    },
+    {
+      "icon_id": "19136616",
+      "name": "馆藏统计",
+      "font_class": "guancangtongji",
+      "unicode": "e644",
+      "unicode_decimal": 58948
+    },
+    {
+      "icon_id": "19136617",
+      "name": "借阅管理",
+      "font_class": "jieyueguanli",
+      "unicode": "e645",
+      "unicode_decimal": 58949
+    },
+    {
+      "icon_id": "14457453",
+      "name": "操作记录",
+      "font_class": "caozuojilu",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "6038499",
+      "name": "警示",
+      "font_class": "jingshi",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "10357178",
+      "name": "借阅",
+      "font_class": "jieyue",
+      "unicode": "e654",
+      "unicode_decimal": 58964
+    },
+    {
+      "icon_id": "11801198",
+      "name": "火",
+      "font_class": "timeRemain",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "14111333",
+      "name": "text",
+      "font_class": "text",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "17692411",
+      "name": "Local Upload",
+      "font_class": "LocalUpload",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "10836231",
+      "name": "pre-view",
+      "font_class": "pre-view",
+      "unicode": "ea4f",
+      "unicode_decimal": 59983
+    },
+    {
+      "icon_id": "15024976",
+      "name": "ic_dwonload_line",
+      "font_class": "ic_dwonload_line",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "3525533",
+      "name": "收藏",
+      "font_class": "collected",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "3525535",
+      "name": "收藏2",
+      "font_class": "collect",
+      "unicode": "e686",
+      "unicode_decimal": 59014
+    },
+    {
+      "icon_id": "5634072",
+      "name": "folder",
+      "font_class": "folder",
+      "unicode": "efdb",
+      "unicode_decimal": 61403
+    },
+    {
+      "icon_id": "11398909",
+      "name": "folder-open",
+      "font_class": "folder-open",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7588089",
+      "name": "编辑",
+      "font_class": "edit",
+      "unicode": "e61b",
+      "unicode_decimal": 58907
+    },
+    {
+      "icon_id": "9874515",
+      "name": "KHCFDC_上移",
+      "font_class": "up",
+      "unicode": "e6d7",
+      "unicode_decimal": 59095
+    },
+    {
+      "icon_id": "9874545",
+      "name": "KHCFDC_下移",
+      "font_class": "down",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "16563767",
+      "name": "删 除 ",
+      "font_class": "delete",
+      "unicode": "e618",
+      "unicode_decimal": 58904
+    },
+    {
+      "icon_id": "7550210",
+      "name": "添加",
+      "font_class": "plus-circle",
+      "unicode": "e68a",
+      "unicode_decimal": 59018
+    },
+    {
+      "icon_id": "14719399",
+      "name": "添加  增加   加",
+      "font_class": "plus-square",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "6072734",
+      "name": "User Settings",
+      "font_class": "UserSettings",
+      "unicode": "e68c",
+      "unicode_decimal": 59020
+    }
+  ]
+}

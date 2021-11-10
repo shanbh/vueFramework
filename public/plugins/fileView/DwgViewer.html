@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dwg文件浏览-use MxDrawX52</title>
+  <script src="js/dist.common-1.4.js"></script>
+  <style>
+	html, body {
+            margin: 0px;
+            height: 100%;
+        }
+  </style>
+  <script type="text/javascript">
+        var mxtime = setInterval(InitMxDrawX, 100);
+        //初始化
+        function InitMxDrawX() {
+            if (MxDrawX) {
+                if (!MxDrawX.IsIniting()) {
+                    clearInterval(mxtime);
+                    var iMxApp = MxDrawX.NewComObject("IMxDrawApplication");
+                    iMxApp.InitMxDrawOcx("","DISTApplicationPlatform", "DIST-DAP", "021-61016226","HHHH242AB346CB4FB33268F82C067BD80C0998015277215224C6E03D07C55B3CDECFD6E7E47A07EC921E58110000242A07670C3514D6438808CF5439AB729E19271F3E3FBA4638E4F41EBFFE71CCB6B3A05A368496EA75540000242AEA6BFC4682CE62B4C8D334B108391D8D590CF572918988D5957D4421AC98D08A8B5CA975290320410000242A3C984F0243F252AD78CD887C35CAC79FE55E92C32892C9E4C4D2AF7C1FD1AEF9ECBA7B33E440A7120000242A42B5E9E2BC93BE772D8DDE95A39BCE97EB3A1A6EDB6DEA7D08A2CF6CB03CE1D5AC68A621A6C6C7130000242AA79BFA8A1AE136899BB132C9E1A9E05382AC8C7A97C33CF11C87961FD72C23DC1D6F5B198F9033090000242A623303BB73A299841D4A4546521CF94F8B05AFF6F56FCDEFB7C018C084890AEB2EC364D08E0404080000242A86607A80604437FF38E35D9E5A14DC692130B02A308C3B3612B882A412B6E58409875F95EF0523AB0000242A7A3DC27972B2E53B9FB474C417E07EC656421E216C84368471B353BF84A2C7AA35B491DDE9456F320000242AB103FE23240D6CA9E2F82D99678BBAAA12B882A412B6E58470A8E3DBC40BE391F4C6870BEA4332AC0000080AEA463ABFFC6DE4D50000");
+                    // 控件初始化完成，需要在启动做的事，在这里做
+                    MxDrawX.BrowseMode = true;
+                    // 启动时打开文件
+                    MxDrawX.OpenDwgFile(getFileUrl());
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+  <script type="text/javascript">
+        var s = "";
+        if(isIE()){
+            s = "<object codebase='ActiveXControls/MxDrawX52.CAB#version=5.2.0.0' id='MxDrawX' width='100%' height='" + (document.body.clientHeight - 5) + "'";
+            s += "        classid='clsid:74A777F8-7A8F-4e7c-AF47-7074828086E2'>";
+            s += "</object>";
+        }else{
+            s = "<object id='MxDrawX' type='application/x-itst-activex' align='baseline' border='0' width='100%' height='" + (document.body.clientHeight - 5) + "'";
+            s += "clsid='{74A777F8-7A8F-4e7c-AF47-7074828086E2}'>";
+        }
+        s += "        <param name='_Version' value='65536'>";
+        s += "        <param name='_ExtentX' value='24262'>";
+        s += "        <param name='_ExtentY' value='16219'>";
+        s += "        <param name='_StockProps' value='0'>";
+        s += "        <param name='DwgFilePath' value=''>";
+        s += "        <param name='IsRuningAtIE' value='1'>";
+        s += "        <param name='showtoolbar' value='-1'>";
+        s += "        <param name='showlayoutbar' value='0'>";
+        s += "        <param name='UserName' value='上海数慧系统技术有限公司'>";
+        s += "        <param name='UserSoftwareName' value='数慧业务基础平台'>";
+//        s += "        <param name='UserPhone' value='021-61016226'>";
+        s += "        <param name='UserPhone' value=''>";
+        s += "        <param name='UserData' value='HHHH262AB346CB4FB33268F82C067BD80C0998015277215224C6E03DA1A664639733372E359776C0226457BF0000262A3EC8957E56C8B2D4FE7487DDD2312B46BB8C0EC92849B97877B64E334DCBDA939DE69A66E4456B620000262AFD9540037D8A06D355EA8A42DE11B57BF12E40BEFE40A74D8678E2D6A888D241520DA1FF53999C840000262AF0CEA6A5982CF973BBCC10074889583ED5094C614DCBBA832591D912AEC62EB78A9CE68A761C208A0000262A2D8DDE95A39BCE97EB3A1A6EDB6DEA7D08A2CF6CB03CE1D5956FE0EDA3588DAC819699375273363E0000262A8211AFB10F7C89C7D6FEBCB5F11DC035999FD8F69694D7ADCC01FBC3EF586600E2498AFAA8418CA70000262AF8C7629E031C8342CD793C1828D382FFE52E584C299B24B7ACDDF35F0316CD07E7EAC339F53824F20000262AE690BC76193B7FDFFCE70F7ADBFE96D275CB3F886C207CB2B6797ADF2F74427204133D1651259B240000262AF5D3C074CA5D80A61EC09EB1B8337FDE56421E216C84368471B353BF84A2C7AA1D401FF0D1D976940000262AE418D21C646611A0CE9EE0640C08A5E835A7698525AF337AE837B720B8C8DD962C17CAB647450D810000040A5BF49063A436400D0000'";
+        s += "    <embed width='100%' height='" + (document.body.clientHeight - 5) + "' showtoolbar='-1' showlayoutbar='0' pluginspage='ActiveXControls/MxDrawX52.CAB'></EMBED>";
+        s += "</object>";
+        document.write(s);
+    </script>
+</body>
+</html>

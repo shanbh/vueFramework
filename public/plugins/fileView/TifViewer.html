@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>tif文件浏览-usr alternatiff</title>
+  <script src="js/dist.common-1.4.js" type="text/javascript"></script>
+  <style type="text/css">
+	html, body {
+		margin: 0px;
+		height: 100%;
+	}
+  </style>
+  <script type="text/javascript">
+        window.onload = function () {
+            if (!checkPlugins('AlternaTIFF', 'Alttiff.AlttiffCtl')) {
+                var userAgent = navigator.userAgent;//取得浏览器的userAgent字符串
+                var id = "#tif_" + (isIE() ? "ax" : "pl") + "_" + (window.navigator.platform.indexOf("32") ? "32" : "64");
+                var container = document.getElementById("divcontainer");
+				container.style.display = "block";
+				var target = document.getElementById(id);
+				target.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body style="height:100%; margin:0; padding:0;">
+    <div id="divcontainer" style="display:none">
+        <div id="tif_ax_32" style="display:none">
+            您的浏览器没有安装插件：<a href="ActiveXControls/alternatiff-ax-w32-2.0.8.zip">alternatiff-ax-w32-2.0.8.zip</a>【如已安装，请忽略!】
+        </div>
+        <div id="tif_ax_64" style="display:none">
+            您的浏览器没有安装插件：<a href="ActiveXControls/alternatiff-ax-w64-2.0.8.zip">alternatiff-ax-w64-2.0.8.zip</a>【如已安装，请忽略!】
+        </div>
+        <div id="tif_pl_32" style="display:none">
+            您的浏览器没有安装插件：<a href="ActiveXControls/alternatiff-pl-w32-2.0.8.exe">alternatiff-pl-w32-2.0.8.exe</a>【如已安装，请忽略!】
+        </div>
+        <div id="tif_pl_64" style="display:none">
+            您的浏览器没有安装插件：<a href="ActiveXControls/alternatiff-pl-w64-2.0.8.exe">alternatiff-pl-w64-2.0.8.exe</a>【如已安装，请忽略!】
+        </div>
+        <script type="text/javascript">
+            var sinfo = "";
+            sinfo += "您的浏览器没有安装alttiff.cab，或不支持我们的控件，请下载源文件查看!";
+            sinfo += "源文件地址:<a href='" + getQueryParam('sourceurl') + "' target='_blank'>" + getQueryParam('name') + "</a>";
+            document.write(sinfo);
+        </script>
+    </div>
+    <script type="text/javascript">
+        var s = "<object id='tifobj' width='100%' codebase='ActiveXControls/alttiff.cab#version=2.0.8.0' height='" + (document.body.clientHeight - 5) + "'";
+        s += " classid='CLSID:106E49CF-797A-11D2-81A2-00E02C015623'>";
+        s += "    <param name='src' value='" + getFileUrl() + "' />";
+        s += "    <param name='negative' value='no' />";
+        //s += "    <param name='smoothimage' value='yes' />";
+        //s += "    <param name='fixedsize' value='yes' />";
+        //s += "    <param name='toolbaritems' value='none' />";
+        s += "    <param name='mousemode' value='pan' />";
+        s += "    <embed width='100%' height='" + (document.body.clientHeight - 5) + "'";
+        s += " src='" + getFileUrl() + "' type='application/x-alternatiff' negative='yes'>";
+        s += "</object>";
+        document.write(s);
+    </script>
+</body>
+</html>

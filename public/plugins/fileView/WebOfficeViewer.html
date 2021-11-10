@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Office材料浏览-use webOffice</title>
+  <script src="js/dist.common-1.4.js"></script>
+  <style>
+
+  </style>
+  <script type="text/javascript">
+  	var webOffice = null;
+  	function winOnload()
+	{
+	    webOffice = document.all.webOffice;
+	    webOffice.ShowToolBar = 0;// 0 隐藏 1 显示
+	    ProtectDoc();
+	    setTimeout(loadDoc,2000);
+	}
+  	//加载文件
+  	function loadDoc()
+	{
+	    webOffice.LoadOriginalFile(getFileUrl(),'docx');
+	}
+  	//关闭
+	function closeDoc()
+	{
+	    webOffice.CloseDoc(0);
+	}
+	//保护文档
+	function ProtectDoc()
+	{
+	    webOffice.ProtectDoc(1,2,"distpwd");
+	}
+	//安全设置
+	function Security()
+	{
+	    try{
+	        webOffice.SetSecurity(0x02);//禁止保存
+	        webOffice.SetSecurity(0x04);//禁止复制
+	    }catch(e){
+	        
+	    }
+	}
+  </script>
+</head>
+<body onload="winOnload()" onunload="winUnload()" style="height:100%; margin:0; padding:0;">
+  <script type="text/javascript">
+  	var s = "";
+  	if(isIE()){
+  		var s="<object id='webOffice' style='left: 0px; width: 100%; top: 0px; height:565px;' height='" + (document.body.clientHeight - 5) + "'";
+	        s += " classid='clsid:FF09E4FA-BFAA-486E-ACB4-86EB0AE875D5'";
+	        s += " codebase='ActiveXControls/WebOffice.cab#Version=7,0,0,8'>";
+  	}else{
+            s = "<object id='webOffice' type='application/x-itst-activex' align='baseline' border='0' width='100%' height='" + (document.body.clientHeight - 5) + "'";
+            s += "clsid='{FF09E4FA-BFAA-486E-ACB4-86EB0AE875D5}'>";
+  	}
+    s += "<param name='_ExtentX' value='6350'>";
+    s += "<param name='_ExtentY' value='6350'>";
+    s += "<param name='ShowToolBar' value='0'>";
+    s += "<param name='ShowMenu' value='0'>";
+    s += "</object>";
+    document.write(s);
+  </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <script src="js/dist.common-1.4.js"></script>
+  <script src="js/viewer.config.js"></script>
+    <title>材料浏览</title>
+    <script type="text/javascript">
+        /*
+         * 需要传url,extension参数，src：材料路径，extension：材料类型
+         */
+         var src = getQueryParam('src');
+         var ext = getQueryParam('extension');
+         if(!ext){
+          ext = src.substring(src.lastIndexOf('.'));
+         }
+         if(src&&ext){
+          ext = ext.toLowerCase().replace('.','');
+          var url = window.location.search;
+          if(viewConfig[ext]){
+            url = viewConfig[ext]+window.location.search;
+          }
+          window.location.href = url;
+         }else{
+          console.log('路径参数(src)或缀名参数(extension)不存在!');
+         }
+    </script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Office材料浏览-use DistOleContainer</title>
+  <script src="js/dist.common-1.4.js"></script>
+  <style>
+	html, body {
+        margin: 0px;
+        height: 100%;
+    }
+  </style>
+  <script type="text/javascript">
+  	var ctrl = null;
+  	function winOnload(){
+  		ctrl = document.getElementById('distOffice');
+  		ctrl.OpenDocFromWeb(getFileUrl());
+  	}
+  	function winUnload(){
+		ctrl.DeleteObject();
+  	}
+  </script>
+</head>
+<body onload="winOnload()" onunload="winUnload()" style="height:100%; margin:0; padding:0;">
+  <script type="text/javascript">
+  	var s = "";
+  	if(isIE()){
+  		var s="<object id='distOffice' style='left: 0px; width: 100%; top: 0px;' height='" + (document.body.clientHeight - 5) + "px'";
+	        s += " classid='clsid:A761C735-2E05-4522-A25A-16B3FDB4743E'";
+	        s += " codebase='ActiveXControls/DistOleContainer.cab#version=1,0,0,3'>";
+  	}else{
+            s = "<object id='distOffice' type='application/x-itst-activex' align='baseline' border='0' width='100%' height='" + (document.body.clientHeight - 5) + "px'";
+            s += "clsid='{A761C735-2E05-4522-A25A-16B3FDB4743E}'>";
+  	}
+    s += "</object>";
+    document.write(s);
+  </script>
+</body>
+</html>

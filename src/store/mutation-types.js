@@ -1,0 +1,7 @@
+export const UPDATE_SIDEBAR = 'UPDATE_SIDEBAR'
+export const UPDATE_HEADER_TAB = 'UPDATE_HEADER_TAB'
+export const REMOVE_HEADER_TAB = 'REMOVE_HEADER_TAB'
+export const UPDATE_TAB_NAME = 'UPDATE_TAB_NAME'
+export const TAB_GROUP = 'tab_group'
+export const LOGIN_STATE = 'login_state'
+export const RESET_STATES = 'resetStates'

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>图片查看器-use viewer.js</title>
+  <link rel="stylesheet" href="css/viewer.min.css">
+  <script type="text/javascript" src="js/viewer.min.js"></script>
+  <script type="text/javascript" src="js/dist.common-1.4.js"></script>
+  <style>
+	.viewer-container{
+		background-color:#fff;
+	}
+	.viewer-toolbar{
+		width:130px;
+	}
+	.viewer-toolbar > li{
+		/*background-color:#ccc;*/
+	}
+    .viewer-reset,.viewer-prev,.viewer-play,.viewer-next {
+		display: none;
+	}
+  </style>
+</head>
+<body>
+  <div>
+    <img id="image" src="" alt="" style="display:none">
+  </div> 
+  <script>
+	var options = {
+		title:false,
+		navbar:false,
+		scalable:false,
+		button:false,
+		keyboard:false,
+		zoomRatio:0.1
+	};
+	var search = window.location.search.substring(1);
+	var url = search.indexOf("fullPath")!=-1?search.substring(4):"";
+	var picture = document.getElementById('image');
+		picture.src = url || getFileUrl();
+    var viewer = new Viewer(picture, options);
+	picture.click();
+  </script>
+</body>
+</html>
